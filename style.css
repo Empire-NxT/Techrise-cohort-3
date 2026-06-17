@@ -1,0 +1,263 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+html{
+  scroll-behavior:smooth;
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  height: 15vh;
+  background-color: aliceblue;
+  position: sticky;
+  top: 0;
+  align-items: center;
+  padding: 0px 10px;
+  z-index: 10;
+}
+nav{
+  display: flex;
+  gap: 10px;
+}
+  
+nav a{
+  text-decoration: none;
+  color:black;
+  font-size: 20px;
+  font-weight: 500;
+}
+.icon{
+  font-size: 30px;
+  display: none;
+}
+
+#herosection{
+  position: relative;
+  height: 85vh;
+  background: url('assets/bkg.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+#herosection::before {
+  content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.65) 0%,
+        rgba(0, 0, 0, 0.6) 100%,
+        rgba(0, 0, 0, 0.6) 100%
+    );
+}
+.hero-content{
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 20px;
+}
+#herosection h1{
+  font-size: 5vw;
+}
+#herosection p {
+  font-size: 3vw;
+  margin-top: 20px;
+}
+#herosection button{
+  border: 0;
+  padding: 15px 40px;
+  background:linear-gradient(to left,white,blue,white);
+  cursor: pointer;
+  color: whitesmoke;
+  font-family: Tahoma;
+  border-radius: 10px;
+  font-weight: 800;
+  margin-top: 30px;
+  
+}
+
+#about h1,
+#what h1,
+#contact h1,
+#testimonies{
+  text-align: center;
+  padding: 15px 0px;
+  
+}
+.aboutus{
+  display: flex;
+  gap: 50px;
+  padding: 20px 40px;
+  
+}
+.aboutus p{
+  font-size: 15px;
+  text-align: justify;
+  color: white;
+}
+#about{
+  background: linear-gradient(to left,rgba(10, 10, 255, 0.518), black);
+  
+}
+.aboutus article{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.aboutus button{
+  width: 15%;
+  background: linear-gradient(to left,blue,black);
+  border: 0;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 10px;
+  color: whitesmoke;
+  font-weight: bold;
+  
+}
+#what {
+  height: 100vh;
+  background: linear-gradient(to left, black,rgba(56, 56, 220, 0.518), black);
+}
+#what figure{
+  border: 1px solid black;
+  width: 40%;
+}
+#what p{
+  color: whitesmoke;
+}
+.course{
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  
+}
+.course p,
+.course b{
+  padding: 15px;
+  text-align: justify;
+}
+.course b{
+  color: whitesmoke;
+}
+.about-pic{
+  border: 2px solid;
+  border-radius: 30px;
+  border-color: rgba(56, 56, 220, 0.518);
+}
+.java{
+  margin-top: 15px;
+}
+.information{
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+.information div{
+  height: 70vh;
+  width: 30%;
+  border: 1px solid black;
+}
+
+.info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.info2{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.form{
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: center;
+  padding-left: 40px;
+}
+.form button{
+  background: linear-gradient(to left,blue,black);
+  border: 0;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  color: whitesmoke;
+  font-weight: bold;
+  
+}
+.info p i{
+  color: blue;
+}
+#testimonies{
+  background: linear-gradient(to left, black,rgba(56, 56, 220, 0.518), black);
+}
+#testimonies figure{
+  border: 1px solid black;
+  width: 40%;
+}
+.people {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  
+}
+.people p {
+  padding: 15px;
+  text-align: justify;
+  color: whitesmoke;
+}
+.people img{
+  height: 300px;
+  
+}
+@media only screen and (max-width: 700px){
+  nav a{
+    display: none;
+  }
+  .icon{
+    display: block;
+  }
+  .aboutus{
+    display: block;
+  }
+  #about img{
+    width: 100%;
+  }
+  #about button{
+    width: 25vw;
+  }
+  #what figure{
+    width: 70%;
+  }
+  .course{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #what {
+    height: 250vh;
+  }
+  #contact {
+    height: 200vh;
+  }
+  .information{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .information div{
+    width: 80%;
+  }
+  .people{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
